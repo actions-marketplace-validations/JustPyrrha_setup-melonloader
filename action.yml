@@ -1,0 +1,24 @@
+name: 'Setup MelonLoader'
+description: 'Download MelonLoader for building Unity mods in CI.'
+author: 'Joe van der Zwet'
+branding:
+  icon: 'cpu'
+  color: 'gray-dark'
+
+inputs:
+  version:
+    default: 'latest'
+    description: 'The version of MelonLoader to download. See README.md for details.'
+    required: false
+  path:
+    default: '.'
+    description: 'Where you want MelonLoader extracted to.'
+    required: false
+  cache:
+    default: 'true'
+    description: 'Whether the action should cache MelonLoader files.'
+    required: false
+
+runs:
+  using: 'node12'
+  main: 'lib/main.js'
