@@ -17,3 +17,5 @@ This will default to the current working directory.
 Whether or not to cache MelonLoader files.\
 Either `true` or `false`, defaults to `true`.
 
+### `token`
+**Required** - Set this to `${{ secrets.GITHUB_TOKEN }}
