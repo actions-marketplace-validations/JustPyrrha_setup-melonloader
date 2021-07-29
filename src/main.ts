@@ -7,7 +7,7 @@ import { filename, pathMinusFile } from "./util/path-utils";
 async function run(): Promise<void> {
     try {
         const inputs: Inputs = getInputs();
-        const version: Version = await findVersion(inputs.version);
+        const version: Version = await findVersion(inputs.version, inputs.token);
         
         if(version.cached && inputs.cache) {
             const cache = tc.find(`melon-${version.type}`, version.name);

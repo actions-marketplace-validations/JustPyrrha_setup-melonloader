@@ -20,8 +20,8 @@ export interface Version {
     source: string;
 }
 
-export async function findVersion(version: string): Promise<Version> {
-    const octokit = gh.getOctokit("you aint gettin my token");
+export async function findVersion(version: string, token: string): Promise<Version> {
+    const octokit = gh.getOctokit(token);
     const output: Version = {
         type: version.startsWith("alpha") ? "alpha" : "release",
         name: "",
