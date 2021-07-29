@@ -18,6 +18,10 @@ inputs:
     default: 'true'
     description: 'Whether the action should cache MelonLoader files.'
     required: false
+  token:
+    default: ''
+    description: 'Check README.md for details.'
+    required: true
 
 runs:
   using: 'node12'
